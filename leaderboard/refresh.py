@@ -71,7 +71,6 @@ class ModelEvaluationProcessor:
         self.output_path.mkdir(parents=True, exist_ok=True)
 
         self.tasks_config = load_tasks_from_config(CONFIG_FILE_PATH)
-        print(f"\n\n{self.tasks_config}\n\n")
         if not self.tasks_config:
             logger.error("Tasks config is empty. Processing might be affected.")
 
@@ -203,7 +202,7 @@ class ModelEvaluationProcessor:
             "Model Name": canonical_model_name,
             "model_url": model_details.get('model_url', model_details.get('link', model_details.get('homepage', 'https://google.com'))),
             "parameters_count": str(model_details.get('n_parameters', "N/A")),
-            "source_type": "Open-Source" # Default, will be refined
+            "source_type": "Closed-Source" # Default, will be refined
         }
         parameters_count_raw = model_details.get('n_parameters', None)
         if parameters_count_raw is not None:

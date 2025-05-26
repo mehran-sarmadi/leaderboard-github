@@ -180,8 +180,6 @@ class LeaderboardApp:
             logger.error("`model_identifier_column` is not set. Cannot perform ranking.")
             return
         for task_key, df in self.raw_dataframes.items():
-            print(f"\n\n{task_key}\n\n")
-            print(self.main_scores_map)
             if df.empty: continue
             ranked_df = df.copy()
             main_score_col_for_tab = self.main_scores_map.get(task_key)

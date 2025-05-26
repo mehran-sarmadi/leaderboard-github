@@ -52,6 +52,7 @@ model_display_configs:
 
   "deepseek-chat":
     display_name: "DeepSeek-R1"
+    url: 'www.google.com'
 
   # Add one entry for each model whose display name or URL you want to customize.
   # If a model ID from your data is not listed here, its raw ID will be used as its name.
@@ -124,12 +125,28 @@ global_settings:
     - "persian_nlu"
   
   numeric_score_columns_for_bolding: # List of ORIGINAL column names
+    # For the "Overall Benchmark" tab (all.jsonl)
     - "Average"
-    - "score_mean"
-    - "strict_instruction_accuracy"
-    - "acc"
-    - "nlg_score"
-    - "nlu_score"
+    - "IFEval-Fa"
+    - "Persian MT-Bench"
+    - "MMLU-Fa"
+    - "PerCoR"
+    - "Persian NLU"
+    - "Persian NLG"
+    
+    # For individual task tabs (if you want to keep their main scores bolded there)
+    # These are typically the values from your 'main_scores_map'
+    - "score_mean"                  # For mt_bench tab
+    - "strict_instruction_accuracy" # For ifeval tab
+    - "acc"                         # For MMLU, persian_csr tabs
+    # "nlg_score" and "nlu_score" are already covered if "Persian NLG" 
+    # and "Persian NLU" are the actual column names in those specific tabs too.
+    # If persian_nlg.jsonl uses "nlg_score" as its main column, and 
+    # persian_nlu.jsonl uses "nlu_score", then you can add them for those specific tabs:
+    - "nlg_score"                   # For persian_nlg tab (if it's different from "Persian NLG")
+    - "nlu_score"                   # For persian_nlu tab (if it's different from "Persian NLU")
+    # Add any other specific metric columns from other .jsonl files 
+    # that you want to have their max value bolded in their respective tabs.
 
   # Add this list:
   columns_to_hide: # List of ORIGINAL column names you don't want to display
