@@ -1,0 +1,93 @@
+{
+  "sentiment-analysis_deepsentipers": {
+    "sentiment-analysis_deepsentipers_acc_modified": null,
+    "sentiment-analysis_deepsentipers_precision_modified": null,
+    "sentiment-analysis_deepsentipers_recall_modified": null,
+    "sentiment-analysis_deepsentipers_fscore_modified": null,
+    "sentiment-analysis_deepsentipers_acc": null,
+    "sentiment-analysis_deepsentipers_precision": null,
+    "sentiment-analysis_deepsentipers_recall": null,
+    "sentiment-analysis_deepsentipers_fscore": null,
+    "sentiment-analysis_deepsentipers_valid_output_ratio": null
+  },
+  "sts_SynPerSTS": {
+    "sts_SynPerSTS_corrcoef_modified": null,
+    "sts_SynPerSTS_corrcoef": null,
+    "sts_SynPerSTS_valid_output_ratio": null
+  },
+  "ner_arman": {
+    "ner_arman_f1_mean": null,
+    "ner_arman_precision_mean": null,
+    "ner_arman_recall_mean": null
+  },
+  "keyword-extraction_SynKeywords": {
+    "keyword-extraction_SynKeywords_f1_mean": null,
+    "keyword-extraction_SynKeywords_precision_mean": null,
+    "keyword-extraction_SynKeywords_recall_mean": null
+  },
+  "tone-classification_SynTone": {
+    "tone-classification_SynTone_acc_modified": null,
+    "tone-classification_SynTone_precision_modified": null,
+    "tone-classification_SynTone_recall_modified": null,
+    "tone-classification_SynTone_fscore_modified": null,
+    "tone-classification_SynTone_acc": null,
+    "tone-classification_SynTone_precision": null,
+    "tone-classification_SynTone_recall": null,
+    "tone-classification_SynTone_fscore": null,
+    "tone-classification_SynTone_valid_output_ratio": null
+  },
+  "sts_FarSICK": {
+    "sts_FarSICK_corrcoef_modified": null,
+    "sts_FarSICK_corrcoef": null,
+    "sts_FarSICK_valid_output_ratio": null
+  },
+  "paraphrase-detection_FarsiParaphraseDetection": {
+    "paraphrase-detection_FarsiParaphraseDetection_acc_modified": null,
+    "paraphrase-detection_FarsiParaphraseDetection_precision_modified": null,
+    "paraphrase-detection_FarsiParaphraseDetection_recall_modified": null,
+    "paraphrase-detection_FarsiParaphraseDetection_fscore_modified": null,
+    "paraphrase-detection_FarsiParaphraseDetection_acc": null,
+    "paraphrase-detection_FarsiParaphraseDetection_precision": null,
+    "paraphrase-detection_FarsiParaphraseDetection_recall": null,
+    "paraphrase-detection_FarsiParaphraseDetection_fscore": null,
+    "paraphrase-detection_FarsiParaphraseDetection_valid_output_ratio": null
+  },
+  "nli_farstail": {
+    "nli_farstail_acc_modified": null,
+    "nli_farstail_precision_modified": null,
+    "nli_farstail_recall_modified": null,
+    "nli_farstail_fscore_modified": null,
+    "nli_farstail_acc": null,
+    "nli_farstail_precision": null,
+    "nli_farstail_recall": null,
+    "nli_farstail_fscore": null,
+    "nli_farstail_valid_output_ratio": null
+  },
+  "paraphrase-detection_parsinlu": {
+    "paraphrase-detection_parsinlu_acc_modified": null,
+    "paraphrase-detection_parsinlu_precision_modified": null,
+    "paraphrase-detection_parsinlu_recall_modified": null,
+    "paraphrase-detection_parsinlu_fscore_modified": null,
+    "paraphrase-detection_parsinlu_acc": null,
+    "paraphrase-detection_parsinlu_precision": null,
+    "paraphrase-detection_parsinlu_recall": null,
+    "paraphrase-detection_parsinlu_fscore": null,
+    "paraphrase-detection_parsinlu_valid_output_ratio": null
+  },
+  "extractive-qa_PQuAD": {
+    "extractive-qa_PQuAD_exact_match": null,
+    "extractive-qa_PQuAD_f1": null
+  },
+  "topic-classification_sid": {
+    "topic-classification_sid_acc_modified": null,
+    "topic-classification_sid_precision_modified": null,
+    "topic-classification_sid_recall_modified": null,
+    "topic-classification_sid_fscore_modified": null,
+    "topic-classification_sid_acc": null,
+    "topic-classification_sid_precision": null,
+    "topic-classification_sid_recall": null,
+    "topic-classification_sid_fscore": null,
+    "topic-classification_sid_valid_output_ratio": null
+  },
+  "nlu_score": null
+}

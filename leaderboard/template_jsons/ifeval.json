@@ -1,0 +1,22 @@
+{
+  "strict_prompt_accuracy": null,
+  "strict_instruction_accuracy": null,
+  "loose_prompt_accuracy": null,
+  "loose_instruction_accuracy": null,
+  "strict_combination_category": null,
+  "strict_detectable_content_category": null,
+  "strict_detectable_format_category": null,
+  "strict_keywords_category": null,
+  "strict_language_category": null,
+  "strict_length_constraints_category": null,
+  "strict_punctuation_category": null,
+  "strict_startend_category": null,
+  "loose_combination_category": null,
+  "loose_detectable_content_category": null,
+  "loose_detectable_format_category": null,
+  "loose_keywords_category": null,
+  "loose_language_category": null,
+  "loose_length_constraints_category": null,
+  "loose_punctuation_category": null,
+  "loose_startend_category": null
+}

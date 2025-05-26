@@ -1,0 +1,48 @@
+{
+  "question-generation_PersianQA": {
+    "question-generation_PersianQA_rougeL_precision": null,
+    "question-generation_PersianQA_rougeL_recall": null,
+    "question-generation_PersianQA_rougeL_f1_score": null
+  },
+  "translation-en2fa_en2fa": {
+    "translation-en2fa_en2fa_bleu": null,
+    "translation-en2fa_en2fa_epoque_bleu": null,
+    "translation-en2fa_en2fa_mizan_bleu": null,
+    "translation-en2fa_en2fa_quran_bleu": null,
+    "translation-en2fa_en2fa_sahife_bleu": null,
+    "translation-en2fa_en2fa_nahj_bleu": null,
+    "translation-en2fa_en2fa_tep_bleu": null
+  },
+  "summarization_SamSUM-fa": {
+    "summarization_SamSUM-fa_rougeL_precision": null,
+    "summarization_SamSUM-fa_rougeL_recall": null,
+    "summarization_SamSUM-fa_rougeL_f1_score": null
+  },
+  "translation-fa2en_fa2en": {
+    "translation-fa2en_fa2en_bleu": null,
+    "translation-fa2en_fa2en_tep_bleu": null,
+    "translation-fa2en_fa2en_mizan_bleu": null,
+    "translation-fa2en_fa2en_quran_bleu": null,
+    "translation-fa2en_fa2en_epoque_bleu": null,
+    "translation-fa2en_fa2en_nahj_bleu": null,
+    "translation-fa2en_fa2en_sahife_bleu": null
+  },
+  "translation-ar2fa_ar2fa": {
+    "translation-ar2fa_ar2fa_bleu": null,
+    "translation-ar2fa_ar2fa_sahife_bleu": null,
+    "translation-ar2fa_ar2fa_nahj_bleu": null,
+    "translation-ar2fa_ar2fa_quran_bleu": null
+  },
+  "summarization_PnSummary": {
+    "summarization_PnSummary_rougeL_precision": null,
+    "summarization_PnSummary_rougeL_recall": null,
+    "summarization_PnSummary_rougeL_f1_score": null
+  },
+  "translation-fa2ar_fa2ar": {
+    "translation-fa2ar_fa2ar_bleu": null,
+    "translation-fa2ar_fa2ar_nahj_bleu": null,
+    "translation-fa2ar_fa2ar_sahife_bleu": null,
+    "translation-fa2ar_fa2ar_quran_bleu": null
+  },
+  "nlg_score": null
+}
