@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 # --- Hugging Face Hub Configuration ---
 # IMPORTANT: Replace with your actual repository details
-TARGET_REPO_ID = "MCINext/submitted-models"  # e.g., "MehranS/PULL_submissions"
+TARGET_REPO_ID = "MCINext/submitted-models"  # e.g., "MehranS/MIZAN_submissions" # Suggested change for consistency
 TARGET_REPO_TYPE = "dataset"  # Recommended type for storing data
 FILENAME_IN_REPO = "model_submissions.csv"  # The name of the CSV file within the Hub repository
 
@@ -137,9 +137,9 @@ def add_new_eval_hf_to_hub(model_name_hf_id: str, revision_hf: str) -> gr.Markdo
 def render_submit():
     # Text for Introduction and Option 1 (Hugging Face Form)
     intro_and_option1_guidance = """
-# Request Model Evaluation for PULL
+# Request Model Evaluation for MIZAN
 
-We're excited to evaluate new models for the **Persian Universal LLM Leaderboard (PULL)**!
+We're excited to evaluate new models for **MIZAN: A Persian LLM Leaderboard**!
 Please choose the submission path that best fits how your model can be accessed for evaluation.
 
 ---

@@ -20,9 +20,9 @@ logger = logging.getLogger(__name__)
 
 def create_app():
     """
-    Creates and configures the main Gradio application for the PULL Leaderboard.
+    Creates and configures the main Gradio application for MIZAN: A Persian LLM Leaderboard.
     """
-    logger.info("Initializing PULL Leaderboard application...")
+    logger.info("Initializing MIZAN: A Persian LLM Leaderboard application...")
 
     # Define the path to the leaderboard's configuration file
     # This assumes app.py is in the project root, and column_config.yaml is inside the 'leaderboard' directory.
@@ -45,13 +45,13 @@ def create_app():
     logger.info("Leaderboard data processing complete.")
 
     # Create the main Gradio interface using gr.Blocks
-    with gr.Blocks(title="Persian Universal LLM Leaderboard (PULL)") as demo:
-        gr.Markdown("<h1 style='text-align: center; width: 100%; margin-bottom: 10px;'>🇮🇷 Persian Universal LLM Leaderboard (PULL)</h1>")
+    with gr.Blocks(title="MIZAN: A Persian LLM Leaderboard") as demo:
+        gr.Markdown("<h1 style='text-align: center; width: 100%; margin-bottom: 10px;'>🇮🇷 MIZAN: A Persian LLM Leaderboard</h1>")
         gr.Markdown("""<p style='font-size: 1.1em; text-align: center; max-width: 800px; margin: 0 auto 20px auto;'>
-        The Persian Universal LLM Leaderboard (PULL) is a comprehensive benchmark for evaluating Large Language Models (LLMs) in Persian.
+        MIZAN: A Persian LLM Leaderboard is a comprehensive benchmark for evaluating Large Language Models (LLMs) in Persian.
         It combines existing datasets, translated benchmarks, and new Persian-specific data to assess LLM capabilities in understanding,
         generation, reasoning, and knowledge relevant to the Persian language and culture.
-        PULL provides a standardized tool for researchers and developers to measure Persian LLM performance.
+        MIZAN provides a standardized tool for researchers and developers to measure Persian LLM performance.
         </p>""")
 
         with gr.Tabs():
@@ -62,25 +62,26 @@ def create_app():
                 leaderboard_processor.create_gradio_interface() # This directly adds its components to the current gr.Blocks scope
                 logger.info("'LLM Benchmark' tab content created.")
 
-            with gr.TabItem("About PULL"):
-                logger.info("Creating 'About PULL' tab content...")
+            with gr.TabItem("About MIZAN"): # Changed from "About PULL"
+                logger.info("Creating 'About MIZAN' tab content...") # Changed from "About PULL"
                 render_about() # Call the function that returns the 'About' page Blocks
-                logger.info("'About PULL' tab content created.")
+                logger.info("'About MIZAN' tab content created.") # Changed from "About PULL"
 
             with gr.TabItem("Request New Model"):
                 logger.info("Creating 'Submit Your Model' tab content...")
                 render_submit() # Call the function that returns the 'Submit' page Blocks
                 logger.info("'Submit Your Model' tab content created.")
 
-    logger.info("PULL Leaderboard application interface created.")
+    logger.info("MIZAN: A Persian LLM Leaderboard application interface created.") # Changed from "PULL Leaderboard"
     return demo
 
 if __name__ == "__main__":
-    logger.info("Launching PULL Leaderboard application...")
-    pull_app = create_app()
+    logger.info("Launching MIZAN: A Persian LLM Leaderboard application...") # Changed from "PULL Leaderboard"
+    pull_app = create_app() # Variable name 'pull_app' kept as is, but can be changed if desired e.g., to 'mizan_app'
     pull_app.launch(
         debug=True, # Enable Gradio debug mode for more detailed error messages in development
-        # share=True # Uncomment to create a public link (useful for temporary sharing)
+        share=True # Uncomment to create a public link (useful for temporary sharing)
         # server_name="0.0.0.0" # Uncomment to make accessible on your local network
     )
-    logger.info("PULL Leaderboard application has been launched.")
+    logger.info("MIZAN: A Persian LLM Leaderboard application has been launched.") # Changed from "PULL Leaderboard"
+# Ensure there are no hidden/invalid characters after this line. A single newline character is standard.

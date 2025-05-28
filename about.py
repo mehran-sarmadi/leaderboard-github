@@ -5,14 +5,14 @@ import gradio as gr
 def render_about():
     with gr.Blocks() as about_page:
         gr.Markdown("""
-        # About the Persian Universal LLM Leaderboard (PULL)
+        # About MIZAN: A Persian LLM Leaderboard
 
-        The Persian Universal LLM Leaderboard (PULL) is designed to establish a standard and comprehensive benchmark for evaluating Large Language Models (LLMs) in the Persian language. This project combines existing datasets, translates and localizes globally recognized benchmarks, and incorporates newly developed, Persian-specific datasets. PULL aims to provide a multi-dimensional assessment of models' capabilities across various linguistic, knowledge-based, and reasoning tasks. Its primary goal is to offer researchers, developers, and enthusiasts a transparent and reliable view of LLM performance in the Persian language landscape.
+        MIZAN: A Persian LLM Leaderboard is designed to establish a standard and comprehensive benchmark for evaluating Large Language Models (LLMs) in the Persian language. This project combines existing datasets, translates and localizes globally recognized benchmarks, and incorporates newly developed, Persian-specific datasets. MIZAN aims to provide a multi-dimensional assessment of models' capabilities across various linguistic, knowledge-based, and reasoning tasks. Its primary goal is to offer researchers, developers, and enthusiasts a transparent and reliable view of LLM performance in the Persian language landscape.
 
-        PULL provides a holistic view of models' strengths and weaknesses by assessing them across a suite of key tasks, contributing to the advancement of AI research for the Persian language.
+        MIZAN provides a holistic view of models' strengths and weaknesses by assessing them across a suite of key tasks, contributing to the advancement of AI research for the Persian language.
         """)
 
-        with gr.Accordion("PULL Benchmark Components Details", open=True):
+        with gr.Accordion("MIZAN Benchmark Components Details", open=True): # Changed from PULL
             
             with gr.Accordion("1. PerCoR (Persian Commonsense Reasoning)", open=False):
                 gr.Markdown("""
@@ -81,7 +81,7 @@ def render_about():
 
         gr.Markdown("""
         ---
-        PULL is a significant step towards the scientific and localized evaluation of language models for Persian, aiming to serve as a valuable assessment reference for researchers, developers, and anyone interested in practical language models.
+        MIZAN is a significant step towards the scientific and localized evaluation of language models for Persian, aiming to serve as a valuable assessment reference for researchers, developers, and anyone interested in practical language models.
         """)
 
     return about_page

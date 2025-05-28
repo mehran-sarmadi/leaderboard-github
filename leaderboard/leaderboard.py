@@ -34,9 +34,9 @@ class ColumnConfig:
         default_column_names = {
             "Model Name": "Model", "model_url": "URL",
             "parameters_count": "⚙️ Params", "source_type": "Source",
-            "Average": "Average", "Rank": "🏆 Rank", "score_mean": "MT-Bench Score",
-            "strict_instruction_accuracy": "IFEval Strict Acc.", "acc": "Accuracy",
-            "nlg_score": "NLG Score", "nlu_score": "NLU Score",
+            "Average": "Average", "Rank": "🏆 Rank", "score_mean": "score_mean (main)",
+            "strict_instruction_accuracy": "strict_instruction_accuracy (main)", "acc": "accuracy (main)",
+            "nlg_score": "nlg_score (main)", "nlu_score": "nlu_score (main)",
         }
 
         if self.config_path and self.config_path.exists():
