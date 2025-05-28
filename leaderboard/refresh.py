@@ -44,7 +44,6 @@ def load_tasks_from_config(config_path: Path) -> Dict[str, str]:
         with open(config_path, 'r', encoding='utf-8') as f:
             config_data = yaml.safe_load(f)
         tasks_from_config = config_data.get('task_display_names', {})
-        print(f'\n\n{tasks_from_config}\n\n')
         if not isinstance(tasks_from_config, dict):
             logger.error(f"'task_display_names' in {config_path} is not a dictionary.")
             return {}

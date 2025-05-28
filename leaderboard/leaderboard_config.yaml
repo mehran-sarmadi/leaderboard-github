@@ -9,7 +9,7 @@ column_names:
   "model_url": "Link"
   "parameters_count": "Parameters"
   "source_type": "Source Type"
-  # "sentiment-analysis_deepsentipers_acc_modified": "SADAM"
+
   # Common score columns (these are examples, use your actual metric names from .jsonl)
   # "Average": "Overall AVG"      # For the 'all' table summary
   # "strict_instruction_accuracy": "IFEval Acc."
@@ -19,7 +19,6 @@ column_names:
   # "nlu_score": "NLU Score"
   # Add other specific metric columns from your .jsonl files that you want to display or rename
   # e.g., "exact_match": "Exact Match", "f1": "F1 Score"
-
 
 # --- Task (Tab) Display Names & Identifiers ---
 # Defines the display names for UI tabs and identifies tasks for processing.
@@ -33,24 +32,6 @@ task_display_names:
   persian_csr: "PerCoR"
   persian_nlg: "Persian NLG" # Overview tab
   persian_nlu: "Persian NLU"
-  question-generation_PersianQA: "PersianQA (QG)"
-  translation-en2fa_en2fa: "Translation (en2fa)"
-  translation-fa2en_fa2en: "Translation (fa2en)"
-  translation-ar2fa_ar2fa: "Translation (ar2fa)"
-  translation-fa2ar_fa2ar: "Translation (fa2ar)"
-  summarization_SamSUM-fa: "SamSum-FA (Summarizaion)"
-  summarization_PnSummary: "PnSummary (Summarizaion)"
-  sentiment-analysis_deepsentipers: "DeepSentiPers (SA)"
-  sts_SynPerSTS: "SynPerSTS (STS)"
-  ner_arman: "Arman (NER)"
-  keyword-extraction_SynKeywords: "SynKeywords (Keyword Extraction)"
-  tone-classification_SynTone: "SynTone (Classification)"
-  sts_FarSICK: "FarSICK (STS)"
-  paraphrase-detection_FarsiParaphraseDetection: "FarsiParaphraseDetection (Paraphrase Detection)"
-  nli_farstail: "Farstail (NLI)"
-  paraphrase-detection_parsinlu: "ParsiNLU (Paraphrase Detection)"
-  extractive-qa_PQuAD: "PQuAD (QA)"
-  topic-classification_sid: "SID (Classification)"
 
 
 
@@ -149,8 +130,8 @@ model_display_configs:
     url: "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct"
 
   "o4-mini":
-    display_name: "GPT-o4-mini"
-    url: "https://openai.com/index/introducing-o3-and-o4-mini/"
+    display_name: "GPT-4o Mini"
+    url: "https://openai.com/index/hello-gpt-4o/"
 
   "deepseek-reasoner":
     display_name: "DeepSeek-R1"
@@ -259,45 +240,23 @@ global_settings:
     # - "another_column_to_hide" 
 
   parent_child_task_map:
-    persian_nlg:
-      - "PersianQA (QG)"
-      - "Translation (en2fa)"
-      - "Translation (fa2en)"
-      - "Translation (ar2fa)"
-      - "Translation (fa2ar)"
-      - "SamSum-FA (Summarizaion)"
-      - "PnSummary (Summarizaion)"
+    persian_nlg: # Parent task key
+      - "question-generation_PersianQA"
+      - "translation-en2fa_en2fa"
+      - "translation-fa2en_fa2en"
+      - "translation-ar2fa_ar2fa"
+      - "translation-fa2ar_fa2ar"
+      - "summarization_SamSUM-fa"
+      - "summarization_PnSummary"
     persian_nlu: # Parent task key
-      - "DeepSentiPers (SA)"
-      - "SynPerSTS (STS)"
-      - "Arman (NER)"
-      - "SynKeywords (Keyword Extraction)"
-      - "SynTone (Classification)"
-      - "FarSICK (STS)"
-      - "FarsiParaphraseDetection (Paraphrase Detection)"
-      - "Farstail (NLI)"
-      - "ParsiNLU (Paraphrase Detection)"
-      - "PQuAD (QA)"
-      - "SID (Classification)"
-
-  # parent_child_task_map:
-  #   persian_nlg:
-  #     - "question-generation_PersianQA"
-  #     - "translation-en2fa_en2fa"
-  #     - "translation-fa2en_fa2en"
-  #     - "translation-ar2fa_ar2fa"
-  #     - "translation-fa2ar_fa2ar"
-  #     - "summarization_SamSUM-fa"
-  #     - "summarization_PnSummary"
-  #   persian_nlu: # Parent task key
-  #     - "sentiment-analysis_deepsentipers"
-  #     - "sts_SynPerSTS"
-  #     - "ner_arman"
-  #     - "keyword-extraction_SynKeywords"
-  #     - "tone-classification_SynTone"
-  #     - "sts_FarSICK"
-  #     - "paraphrase-detection_FarsiParaphraseDetection"
-  #     - "nli_farstail"
-  #     - "paraphrase-detection_parsinlu" # Assumin g this was a typo or duplicate key
-  #     - "extractive-qa_PQuAD"
-  #     - "topic-classification_sid"
+      - "sentiment-analysis_deepsentipers"
+      - "sts_SynPerSTS"
+      - "ner_arman"
+      - "keyword-extraction_SynKeywords"
+      - "tone-classification_SynTone"
+      - "sts_FarSICK"
+      - "paraphrase-detection_FarsiParaphraseDetection"
+      - "nli_farstail"
+      - "paraphrase-detection_parsinlu" # Assumin g this was a typo or duplicate key
+      - "extractive-qa_PQuAD"
+      - "topic-classification_sid"
