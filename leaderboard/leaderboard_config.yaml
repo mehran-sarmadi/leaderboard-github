@@ -32,6 +32,24 @@ task_display_names:
   persian_csr: "PerCoR"
   persian_nlg: "Persian NLG" # Overview tab
   persian_nlu: "Persian NLU"
+  question-generation_PersianQA: "PersianQA (QG)"
+  translation-en2fa_en2fa: "Translation (en2fa)"
+  translation-fa2en_fa2en: "Translation (fa2en)"
+  translation-ar2fa_ar2fa: "Translation (ar2fa)"
+  translation-fa2ar_fa2ar: "Translation (fa2ar)"
+  summarization_SamSUM-fa: "SamSum-Fa (Summarizaion)"
+  summarization_PnSummary: "PnSummary (Summarizaion)"
+  sentiment-analysis_deepsentipers: "DeepSentiPers (SA)"
+  sts_SynPerSTS: "SynPerSTS (STS)"
+  ner_arman: "Arman (NER)"
+  keyword-extraction_SynKeywords: "SynKeywords (Keyword Extraction)"
+  tone-classification_SynTone: "SynTone (Tone Classification)"
+  sts_FarSICK: "FarSICK (STS)"
+  paraphrase-detection_FarsiParaphraseDetection: "FarsiParaphraseDetection (Paraphrase Detection)"
+  nli_farstail: "Farstail (NLI)"
+  paraphrase-detection_parsinlu: "ParsiNLU (Paraphrase Detection)" # Assuming this was a typo or duplicate key and intended for update
+  extractive-qa_PQuAD: "PQuAD (Extractive QA)"
+  topic-classification_sid: "SID (Topic Classification)"
 
 
 
@@ -130,12 +148,36 @@ model_display_configs:
     url: "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct"
 
   "o4-mini":
-    display_name: "GPT-4o Mini"
-    url: "https://openai.com/index/hello-gpt-4o/"
+    display_name: "GPT-o4 Mini"
+    url: "https://openai.com/index/introducing-o3-and-o4-mini/"
 
   "deepseek-reasoner":
     display_name: "DeepSeek-R1"
     url: "https://api-docs.deepseek.com/guides/reasoning_model"
+    
+  "gemini-2.0-flash":
+    display_name: "Gemini 2.0 Flash"
+    url: "https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-0-flash"
+
+  "gemini-2.5-flash-preview-05-20":
+    display_name: "Gemini 2.5 Flash Preview (05-20)"
+    url: "https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash"
+
+  "Qwen3-30B-A3B":
+    display_name: "Qwen3-30B-A3B"
+    url: "https://huggingface.co/Qwen/Qwen3-30B-A3B"
+
+  "c4ai-command-r-plus":
+    display_name: "C4AI Command R Plus"
+    url: "https://huggingface.co/CohereLabs/c4ai-command-r-plus"
+
+  "c4ai-command-r-v01":
+    display_name: "C4AI Command R v01"
+    url: "https://huggingface.co/CohereLabs/c4ai-command-r-v01"
+
+  "c4ai-command-a-03-2025":
+    display_name: "C4AI Command A (03-2025)"
+    url: "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025"
 
 
 
