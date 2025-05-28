@@ -26,18 +26,18 @@ class ColumnConfig:
         self.column_display_names_map: Dict[str, str] = {}
         self.task_tab_names_map: Dict[str, str] = {}
 
-        default_task_tab_names = {
-            "all": "Overall", "mt_bench": "MT-Bench", "ifeval": "IFEval",
-            "MMLU": "MMLU", "persian_csr": "PerCoR",
-            "persian_nlg": "Persian NLG", "persian_nlu": "Persian NLU"
-        }
-        default_column_names = {
-            "Model Name": "Model", "model_url": "URL",
-            "parameters_count": "⚙️ Params", "source_type": "Source",
-            "Average": "Average", "Rank": "🏆 Rank", "score_mean": "MT-Bench Score",
-            "strict_instruction_accuracy": "IFEval Strict Acc.", "acc": "Accuracy",
-            "nlg_score": "NLG Score", "nlu_score": "NLU Score",
-        }
+        default_task_tab_names = {}
+        #     "all": "Overall", "mt_bench": "MT-Bench", "ifeval": "IFEval",
+        #     "MMLU": "MMLU", "persian_csr": "PerCoR",
+        #     "persian_nlg": "Persian NLG", "persian_nlu": "Persian NLU"
+        # }
+        default_column_names = {}
+        #     "Model Name": "Model", "model_url": "URL",
+        #     "parameters_count": "⚙️ Params", "source_type": "Source",
+        #     "Average": "Average", "Rank": "🏆 Rank", "score_mean": "MT-Bench Score",
+        #     "strict_instruction_accuracy": "IFEval Strict Acc.", "acc": "Accuracy",
+        #     "nlg_score": "NLG Score", "nlu_score": "NLU Score",
+        # }
 
         if self.config_path and self.config_path.exists():
             try:
@@ -57,10 +57,10 @@ class ColumnConfig:
             self.task_tab_names_map = default_task_tab_names
 
     def get_column_display_name(self, original_col_name: str) -> str:
-        return self.column_display_names_map.get(original_col_name, original_col_name.replace("_", " ").title())
+        return self.column_display_names_map.get(original_col_name, original_col_name.replace("_", " "))
 
     def get_task_tab_name(self, task_key: str) -> str:
-        return self.task_tab_names_map.get(task_key, task_key.replace("_", " ").title())
+        return self.task_tab_names_map.get(task_key, task_key.replace("_", " "))
 
     def rename_dataframe_columns(self, df: pd.DataFrame) -> pd.DataFrame:
         if df.empty: return df

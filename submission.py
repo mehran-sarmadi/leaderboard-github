@@ -7,7 +7,7 @@ import pandas as pd
 import io # To handle string as a file-like object for pandas
 import logging
 
-from huggingface_hub import HfApi, HfFolder
+from huggingface_hub import HfApi, HfFolder, hf_hub_download
 from huggingface_hub.utils import HfHubHTTPError, EntryNotFoundError # For specific error handling
 
 # --- Logging Setup ---
@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 # --- Hugging Face Hub Configuration ---
 # IMPORTANT: Replace with your actual repository details
-TARGET_REPO_ID = "YOUR_USERNAME_OR_ORG/YOUR_DATASET_REPO_NAME"  # e.g., "MehranS/PULL_submissions"
+TARGET_REPO_ID = "MCINext/submitted-models"  # e.g., "MehranS/PULL_submissions"
 TARGET_REPO_TYPE = "dataset"  # Recommended type for storing data
 FILENAME_IN_REPO = "model_submissions.csv"  # The name of the CSV file within the Hub repository
 

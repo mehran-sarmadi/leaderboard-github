@@ -30,7 +30,7 @@ NLU_NLG_TASK_KEYS = ["persian_nlu", "persian_nlg"]
 
 ALL_LEADERBOARD_COLUMNS = [
     'Model Name', 'model_url', 'parameters_count', 'source_type', 'Average',
-    'IFEval-Fa', 'Persian MT-Bench', "MMLU-Fa",
+    'Persian IFEval', 'Persian MT-Bench', "PerMMLU",
     "PerCoR", "Persian NLU", "Persian NLG"
 ]
 
@@ -44,6 +44,7 @@ def load_tasks_from_config(config_path: Path) -> Dict[str, str]:
         with open(config_path, 'r', encoding='utf-8') as f:
             config_data = yaml.safe_load(f)
         tasks_from_config = config_data.get('task_display_names', {})
+        print(f'\n\n{tasks_from_config}\n\n')
         if not isinstance(tasks_from_config, dict):
             logger.error(f"'task_display_names' in {config_path} is not a dictionary.")
             return {}
@@ -102,9 +103,9 @@ class ModelEvaluationProcessor:
                     merged[k] = self._deep_override(v_base, override[k])
                 else:
                     merged[k] = v_base
-            for k, v_override in override.items():
-                 if k not in merged:
-                    merged[k] = v_override
+            # for k, v_override in override.items():
+            #      if k not in merged:
+            #         merged[k] = v_override
             return merged
         elif override is not None and override != -1:
             return override
